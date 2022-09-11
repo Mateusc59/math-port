@@ -6,16 +6,24 @@
       </div>
       <ul v-show="!mobile" class="navigation">
         <li>
-          <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
+          <router-link class="link" :to="{ name: 'Home' }">{{
+            $t("nav.home")
+          }}</router-link>
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">About</router-link>
+          <router-link class="link" :to="{ name: '' }">{{
+            $t("nav.about")
+          }}</router-link>
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">Portfolio</router-link>
+          <router-link class="link" :to="{ name: '' }">{{
+            $t("nav.portfolio")
+          }}</router-link>
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">Contact</router-link>
+          <router-link class="link" :to="{ name: '' }">{{
+            $t("nav.contact")
+          }}</router-link>
         </li>
       </ul>
       <div class="icon">
@@ -42,12 +50,17 @@
           </li>
         </ul>
       </transition>
+      <LocaleSwitcher />
     </nav>
   </header>
 </template>
 
 <script>
+import LocaleSwitcher from "@/components/LocaleSwitcher";
+
 export default {
+  components: { LocaleSwitcher },
+
   name: "NavBar",
   data() {
     return {
@@ -204,9 +217,17 @@ header {
 }
 
 .scrolled-nav {
-  background-color: black;
+  background-color: #ffff;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) 0 2px 4px -1px
     rgba(0, 0, 0, 0.06);
+
+  .link {
+    font-weight: 500;
+    color: #2c3e50 !important;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+  }
 
   nav {
     padding: 8px 0;
