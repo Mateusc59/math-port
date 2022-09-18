@@ -121,9 +121,11 @@ header {
     transition: 0.5s ease all;
     width: 90%;
     margin: 0 auto;
+
     @media (min-width: 1140px) {
       max-width: 1140px;
     }
+
     ul,
     .link {
       font-weight: 500;
@@ -132,6 +134,7 @@ header {
       text-decoration: none;
       margin: 0;
     }
+
     li {
       text-transform: uppercase;
       padding: 16px;
@@ -143,14 +146,17 @@ header {
       transition: 0.5s ease all;
       padding-bottom: 4px;
       border-bottom: 1px solid transparent;
+
       &:hover {
         color: blue;
         border-color: lightblue;
       }
     }
+
     .branding {
       display: flex;
       align-items: center;
+
       img {
         width: 50px;
         transition: 0.5s ease all;
@@ -162,10 +168,12 @@ header {
       align-items: center;
       flex: 1;
       justify-content: flex-end;
+
       .link {
         color: #fff;
       }
     }
+
     .icon {
       display: flex;
       align-items: center;
@@ -180,9 +188,11 @@ header {
         transition: 0.8s ease all;
       }
     }
+
     .icon-active {
       transform: rotate(180deg);
     }
+
     .dropdown-nav {
       position: fixed;
       width: 100%;
@@ -192,24 +202,30 @@ header {
       top: 0;
       left: 0;
     }
+
     li {
       margin-left: 0;
+
       .link {
         color: black;
       }
     }
+
     .dropdown-nav .link {
       display: flex;
       flex-direction: row;
     }
+
     .mobile-nav-enter-active,
     .mobile-nav-enter-leave {
       transition: 1s ease all;
     }
+
     .mobile-nav-enter-from,
     .mobile-nav-leave-to {
       transform: translateX(-250px);
     }
+
     .mobile-nav-enter-to {
       transform: translateX(0);
     }
