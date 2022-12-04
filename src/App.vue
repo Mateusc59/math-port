@@ -1,11 +1,11 @@
 <template>
   <NavBar />
   <router-view />
-  <div class="home__container">
-    <div class="home">
-      <div class="flexbox">
-        <img alt="Vue" class="img_pea" src="./assets/logopea.png" />
-        <div class="introduction__box">
+  <div class="Porfolio__container">
+    <div class="Porfolio__home">
+      <div class="Porfolio__flexbox">
+        <img alt="Vue" class="img_pea" src="./assets/code1.png" />
+        <div class="Portfolio__introduction__box">
           <h1>Hi, I'm Mathieu</h1>
           <p>Frontend developer & Css lover</p>
           <button class="btn_download">
@@ -14,6 +14,39 @@
         </div>
       </div>
     </div>
+    <div>
+      <h2>Projects Portfolio</h2>
+      <p>Search projects</p>
+    </div>
+    <div class="Porfolio__project">
+      <div class="Porfolio__card">
+        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
+        <p>My Name Project</p>
+      </div>
+      <div class="Porfolio__card">
+        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
+        <p>My Name Project</p>
+      </div>
+      <div class="Porfolio__card">
+        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
+        <p>My Name Project</p>
+      </div>
+      <div class="Porfolio__card">
+        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
+        <p>My Name Project</p>
+      </div>
+    </div>
+    <footer>
+      <div class="Portfolio__border"></div>
+      <h2>Follow me</h2>
+      <div class="Portfolio__icon">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-gitlab"></i>
+        <i class="fa-brands fa-github"></i>
+      </div>
+      <p>© 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H</p>
+    </footer>
   </div>
 </template>
 
@@ -43,37 +76,105 @@ body {
   text-align: center;
   color: #2c3e50;
   min-height: 100%;
-  height: 150vh;
+  height: 100%;
   position: relative;
   background-color: #639d63;
-}
-
-.home {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-}
-
-.flexbox {
-  border: 1px solid blue;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-  align-items: center;
-
-  @media only screen and (max-width: 745px) {
+  overflow: hidden;
+  @media only screen and (max-width: 845px) {
     background-color: lightblue;
     flex-direction: column-reverse;
   }
 }
 
+.Porfolio__ {
+  &home {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+    @media only screen and (max-width: 845px) {
+      padding-top: 70px;
+    }
+  }
+  &flexbox {
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+
+    @media only screen and (max-width: 845px) {
+      background-color: lightblue;
+      flex-direction: column-reverse;
+      padding-top: 0px;
+    }
+  }
+  h1 {
+    font-size: 32px;
+  }
+
+  &project {
+    border: 1px solid gold;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &card {
+    width: 400px;
+    height: 330px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  &card_img {
+    width: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  .Portfolio {
+    &__border {
+      width: 500px;
+      margin: auto;
+      border: 1px solid #fff;
+      opacity: 0.4;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    &__icon {
+      i {
+        margin: 10px;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+          color: #fff;
+          opacity: 0.9;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  p {
+    padding-top: 50px;
+    font-weight: 500;
+  }
+}
 .img_pea {
-  /* margin-top: 150px;
-  height: 25%; */
+  width: 600px;
+  @media (max-width: 875px) {
+    width: 300px;
+  }
 }
 
 /* Button */

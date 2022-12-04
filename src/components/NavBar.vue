@@ -2,7 +2,7 @@
   <header :class="{ 'scrolled-nav': scrollNav }">
     <nav>
       <div class="branding">
-        <img src="../assets/logopea.png" style="width: 50px" alt="logo" />
+        <img src="../assets/me.png" style="width: 50px" alt="logo" />
       </div>
       <ul v-show="!mobile" class="navigation">
         <li>
@@ -160,6 +160,7 @@ header {
       img {
         width: 50px;
         transition: 0.5s ease all;
+        border-radius: 50%;
       }
     }
 
