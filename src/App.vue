@@ -80,7 +80,7 @@ body {
   position: relative;
   background-color: #639d63;
   overflow: hidden;
-  @media only screen and (max-width: 845px) {
+  @media (max-width: 875px) {
     background-color: lightblue;
     flex-direction: column-reverse;
   }
@@ -95,7 +95,7 @@ body {
     width: 100%;
     height: 100%;
     padding-top: 0px;
-    @media only screen and (max-width: 845px) {
+    @media (max-width: 875px) {
       padding-top: 70px;
     }
   }
@@ -108,7 +108,7 @@ body {
     align-items: center;
     padding-top: 50px;
 
-    @media only screen and (max-width: 845px) {
+    @media (max-width: 875px) {
       background-color: lightblue;
       flex-direction: column-reverse;
       padding-top: 0px;
