@@ -14,7 +14,7 @@ select {
   top: 30px;
   right: -120px;
   border: none;
-  color: #fff;
+  color: y;
 }
 .scrolled-nav select {
   color: #2c3e50 !important;
