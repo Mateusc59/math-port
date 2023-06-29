@@ -1,7 +1,6 @@
 import { createApp } from "vue";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import { ScrollTrigger } from "gsap/all";
 import App from "./App.vue";
 import router from "./router";
 import i18n from "./i18n";
