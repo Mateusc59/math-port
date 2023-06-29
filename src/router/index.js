@@ -4,6 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+window.ScrollTrigger = ScrollTrigger;
 
 document.addEventListener("DOMContentLoaded", function () {
   gsap.timeline({
@@ -17,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     ease: "power2.out",
   });
+  ScrollTrigger.refresh()
 });
 
 const routes = [
