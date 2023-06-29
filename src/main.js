@@ -8,6 +8,8 @@ import "./swiper-fullscreen/swiper-fullscreen.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+gsap.registerPlugin(ScrollTrigger);
+
 createApp(App).use(i18n).use(router).mount("#app");
 // Select the HTML element you want to animate
 /* const box = document.querySelector(".Portfolio__introduction__box");
@@ -45,8 +47,7 @@ cards.forEach((card) => {
     });
   });
 });
-// Import Splitting.js and ScrollTrigger libraries
-gsap.registerPlugin(ScrollTrigger);
+// Import  ScrollTrigger libraries
 
 gsap.to(".hero", {
   scrollTrigger: {
