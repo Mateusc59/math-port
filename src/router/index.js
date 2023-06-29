@@ -5,19 +5,18 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.from(".hero", {
-    scrollTrigger: {
-      trigger: ".hero",
-      scrub: true,
-      pin: true,
-      start: "center center",
-      end: "bottom -100%",
-      toggleClass: { targets: ".hero", className: "active" },
-    },
-    ease: "power2.out",
-  });
+gsap.from(".hero", {
+  scrollTrigger: {
+    trigger: ".hero",
+    scrub: true,
+    pin: true,
+    start: "center center",
+    end: "bottom -100%",
+    toggleClass: { targets: ".hero", className: "active" },
+  },
+  ease: "power2.out",
 });
+
 
 const routes = [
   {
