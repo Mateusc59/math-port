@@ -3,9 +3,9 @@ import HomeView from "../views/HomeView.vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
-
 document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
+
   gsap.to(".hero", {
     scrollTrigger: {
       trigger: ".hero",
@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
       start: "center center",
       end: "bottom -100%",
       toggleClass: { targets: ".hero", className: "active" },
-      markers: true, // Optional: Add markers to visualize the trigger
-      invalidateOnRefresh: true, // Optional: Invalidate the ScrollTrigger on refresh
     },
     ease: "power2.out",
   });
@@ -26,8 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       scrub: 0.5,
       start: "top bottom",
       end: "bottom -300%",
-      markers: true, // Optional
-      invalidateOnRefresh: true, // Optional
     },
     y: "-30%",
     ease: "power2.out",
