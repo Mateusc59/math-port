@@ -25,7 +25,7 @@
     <div class="hero__inner">
       <div class="hero__images">
         <div class="hero__content">
-          <div class="hero__headline">
+          <div class="hero__headline hero__image">
             <span>Nice to meet you !</span>
           </div>
         </div>

@@ -7,8 +7,6 @@ import "./web-components/custom-cursor/custom-cursor";
 import "./swiper-fullscreen/swiper-fullscreen.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "splitting/dist/splitting.css";
-import "splitting/dist/splitting-cells.css";
 
 createApp(App).use(i18n).use(router).mount("#app");
 // Select the HTML element you want to animate
