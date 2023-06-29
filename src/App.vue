@@ -24,14 +24,10 @@
   <section class="container hero">
     <div class="hero__inner">
       <div class="hero__images">
-        <!--  <img
-          class="hero__image"
-          src="https://images.unsplash.com/photo-1508781197106-d8c535dcf276?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1200&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-        /> -->
-      </div>
-      <div class="hero__content">
-        <div class="hero__headline">
-          <span>Nice to meet you !</span>
+        <div class="hero__content">
+          <div class="hero__headline">
+            <span>Nice to meet you !</span>
+          </div>
         </div>
       </div>
     </div>
