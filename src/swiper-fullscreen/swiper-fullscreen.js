@@ -87,6 +87,7 @@ class SwiperFullscreen extends HTMLElement {
     this.swiper.on("click", (swiper, evt) => {
       let slide;
       let child = evt.target;
+      console.log(swiper);
       for (let i = 0; i < 3; i++) {
         let parent = child.parentElement;
         if (parent.classList.contains("swiper-slide")) {

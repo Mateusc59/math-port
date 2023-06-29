@@ -60,7 +60,7 @@ gsap.to(".hero", {
   },
 });
 
-gsap.to(".hero__image", {
+gsap.to(".hero__headline", {
   scrollTrigger: {
     trigger: ".hero",
     scrub: 0.5,
