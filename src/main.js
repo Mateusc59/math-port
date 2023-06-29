@@ -8,6 +8,31 @@ import "./swiper-fullscreen/swiper-fullscreen.js";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Import  ScrollTrigger libraries
+
+gsap.to(".hero", {
+  scrollTrigger: {
+    trigger: ".hero",
+    scrub: true,
+    pin: true,
+    start: "center center",
+    end: "bottom -100%",
+    toggleClass: "active",
+    ease: "power2",
+  },
+});
+
+gsap.to(".hero__headline", {
+  scrollTrigger: {
+    trigger: ".hero",
+    scrub: 0.5,
+    start: "top bottom",
+    end: "bottom -300%",
+    ease: "power2",
+  },
+  y: "-30%",
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 createApp(App).use(i18n).use(router).mount("#app");
@@ -47,27 +72,4 @@ cards.forEach((card) => {
     });
   });
 });
-// Import  ScrollTrigger libraries
 
-gsap.to(".hero", {
-  scrollTrigger: {
-    trigger: ".hero",
-    scrub: true,
-    pin: true,
-    start: "center center",
-    end: "bottom -100%",
-    toggleClass: "active",
-    ease: "power2",
-  },
-});
-
-gsap.to(".hero__headline", {
-  scrollTrigger: {
-    trigger: ".hero",
-    scrub: 0.5,
-    start: "top bottom",
-    end: "bottom -300%",
-    ease: "power2",
-  },
-  y: "-30%",
-});
