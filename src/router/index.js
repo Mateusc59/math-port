@@ -17,7 +17,6 @@ gsap.from(".hero", {
   ease: "power2.out",
 });
 
-
 const routes = [
   {
     path: "/",
