@@ -17,17 +17,6 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     ease: "power2.out",
   });
-
-  gsap.to(".hero__headline", {
-    scrollTrigger: {
-      trigger: ".hero",
-      scrub: 0.5,
-      start: "top bottom",
-      end: "bottom -300%",
-    },
-    y: "-30%",
-    ease: "power2.out",
-  });
 });
 
 const routes = [

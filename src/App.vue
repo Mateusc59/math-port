@@ -21,7 +21,7 @@
       </div>
     </div>
   </header>
-  <section class="container hero">
+  <section class="hero">
     <div class="hero__inner">
       <div class="hero__images">
         <div class="hero__content">
