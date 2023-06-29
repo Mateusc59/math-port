@@ -1,0 +1,110 @@
+/* custom-cursor */
+
+/* 
+    Mandatory styles (do not modify)
+    ----------------
+*/
+body.has-cursor {
+    height: 100%; // fix for "cursor: none" on Firefox
+}
+
+.has-cursor *[data-cursor] {
+    cursor: none !important; // makes sure to disable native cursor, especially on links
+}
+
+custom-cursor {
+    pointer-events: none;
+    position: fixed;
+
+    body.no-cursor & {
+        display: none;
+    }
+}
+
+/* 
+    Advised styles 
+    ----------------
+*/
+body.has-cursor {
+    cursor: none;
+} // removes the default browser cursor
+
+custom-cursor {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transform: translate(-100px, -100px); // prevents cursor from being visible on first load
+}
+
+/* 
+    Custom styles 
+    ----------------
+*/
+custom-cursor {
+    /* 
+        Step 1: Let's define the different cursor states.
+        Remember that each state is a different div, so they 
+        can have different width, height, etc.
+    */
+    &::part(state) {
+        // common class for each state
+        position: absolute;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    &::part(default) {
+        opacity: 1;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid black;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &::part(hover) {
+        width: 100px;
+        height: 100px;
+        background: white;
+        border: 1px solid black;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 15px;
+        line-height: 100px;
+        color: #333;
+        font-family: Arial;
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+    // Step 2: Define what happens to each state when the cursor the mousedown event is triggered
+    // (This attribute is automatically added and handled in custom-cursor.js)
+    &[mousedown] {
+        &::part(default) {
+            background-color: green;
+        }
+    }
+
+    // Step 3: Define the states transitions, i.e. what happens to each of the states when one of them is enabled.
+    // For instance, here, when an element with the data-cursor["hover"] attribute is hovered,
+    // here's what happens:
+    &.hover {
+        &::part(state) {
+            opacity: 0; // all states are made transparent
+        }
+
+        &::part(default) {
+            transform: translate(-50%, -50%) scale(3); // and the default state scales up as it vanishes
+        }
+
+        &::part(hover) {
+            opacity: 1; // obviously, the hover state needs to be visible, so this overrides the previous opacity: 0 applied to all states
+            transform: translate(-50%, -50%) scale(1.5); // the hover default state has a 0.5 scale, so when it's enabled it will expand to full scale.
+            background-color: transparent;
+            background-size: cover;
+            background-position: center center;
+            backdrop-filter: blur(1px);
+            -webkit-backdrop-filter: blur(1px);
+        }
+    }
+}

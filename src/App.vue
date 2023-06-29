@@ -1,40 +1,115 @@
 <template>
   <NavBar />
   <router-view />
-  <div class="Porfolio__container">
-    <div class="Porfolio__home">
+  <header class="container">
+    <div class="Porfolio__home container__headline">
       <div class="Porfolio__flexbox">
-        <img alt="Vue" class="img_pea" src="./assets/code1.png" />
+        <!--         <img alt="Vue" class="img_pea" src="./assets/Math.png" />
+ -->
+        <video autoplay muted>
+          <source class="img_pea" src="./assets/math.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+
         <div class="Portfolio__introduction__box">
           <h1>Hi, I'm Mathieu</h1>
           <p>Frontend developer & Css lover</p>
-          <button class="btn_download">
+          <button class="btn_download" data-cursor="hover">
             <a href="/cv.pdf" download="cv">Resume ⬇ </a>
           </button>
         </div>
       </div>
     </div>
+  </header>
+  <section class="container hero">
+    <div class="hero__inner">
+      <div class="hero__images">
+        <!--  <img
+          class="hero__image"
+          src="https://images.unsplash.com/photo-1508781197106-d8c535dcf276?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1200&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjE0NTg5fQ"
+        /> -->
+      </div>
+      <div class="hero__content">
+        <div class="hero__headline">
+          <span>Nice to meet you !</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="Porfolio__container">
+    <div class="Porfolio__home"></div>
     <div>
       <h2>Projects Portfolio</h2>
       <p>Search projects</p>
     </div>
+
     <div class="Porfolio__project">
-      <div class="Porfolio__card">
-        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
-        <p>My Name Project</p>
-      </div>
-      <div class="Porfolio__card">
-        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
-        <p>My Name Project</p>
-      </div>
-      <div class="Porfolio__card">
-        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
-        <p>My Name Project</p>
-      </div>
-      <div class="Porfolio__card">
-        <img alt="Vue" class="Porfolio__card_img" src="./assets/code1.png" />
-        <p>My Name Project</p>
-      </div>
+      <swiper
+        slides-per-view="3"
+        :space-between="20"
+        @swiper="onSwiper"
+        @slideChange="onSlideChange"
+        :loop="true"
+        :autoplay="{ delay: 2500 }"
+      >
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <p>Quote Generator Api</p>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/quote.png"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <p>Multistep Form</p>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/multistep.png"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <p>Tips Calcultator</p>
+            <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/code1.png"
+            />
+            <p>My Name Project</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/code1.png"
+            />
+            <p>My Name Project</p>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/code1.png"
+            />
+            <p>My Name Project</p>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
     <footer>
       <div class="Portfolio__border"></div>
@@ -48,157 +123,47 @@
       <p>© 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H</p>
     </footer>
   </div>
+  <footer class="container second">
+    <h2 class="container__headline">That's pretty neat.</h2>
+  </footer>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import "./web-components/custom-cursor/custom-cursor";
+import "./swiper-fullscreen/swiper-fullscreen";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+import SwiperCore, { Autoplay } from "swiper/core";
+
+// Import Swiper styles
+import "swiper/css";
+
+SwiperCore.use([Autoplay]);
+
 export default {
   name: "App",
   components: {
     NavBar,
+    Swiper,
+    SwiperSlide,
+  },
+
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
   },
 };
 </script>
 
 <style lang="scss">
-* {
-  margin: 0;
-}
-
-body {
-  margin: 0;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  min-height: 100%;
-  height: 100%;
-  position: relative;
-  background-color: #639d63;
-  overflow: hidden;
-  @media (max-width: 875px) {
-    background-color: lightblue;
-    flex-direction: column-reverse;
-  }
-}
-
-.Porfolio__ {
-  &home {
-    border: 1px solid red;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 0px;
-    @media (max-width: 875px) {
-      padding-top: 70px;
-    }
-  }
-  &flexbox {
-    border: 1px solid blue;
-    width: 100%;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 50px;
-
-    @media (max-width: 875px) {
-      background-color: lightblue;
-      flex-direction: column-reverse;
-      padding-top: 0px;
-    }
-  }
-  h1 {
-    font-size: 32px;
-  }
-
-  &project {
-    border: 1px solid gold;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  &card {
-    width: 400px;
-    height: 330px;
-    background-color: #fff;
-    border-radius: 10px;
-    margin: auto;
-    margin-bottom: 20px;
-  }
-  &card_img {
-    width: 50%;
-  }
-  p {
-    font-weight: 700;
-  }
-}
-
-footer {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  .Portfolio {
-    &__border {
-      width: 500px;
-      margin: auto;
-      border: 1px solid #fff;
-      opacity: 0.4;
-      margin-top: 20px;
-      margin-bottom: 40px;
-    }
-    &__icon {
-      i {
-        margin: 10px;
-        cursor: pointer;
-        &:hover {
-          transform: scale(1.2);
-          color: #fff;
-          opacity: 0.9;
-          transition: 0.5s;
-        }
-      }
-    }
-  }
-  p {
-    padding-top: 50px;
-    font-weight: 500;
-  }
-}
-.img_pea {
-  width: 600px;
-  @media (max-width: 875px) {
-    width: 300px;
-  }
-}
-
-/* Button */
-
-.btn_download {
-  margin-top: 10px;
-  background: rgba(255, 255, 255, 0.41);
-  border-radius: 6px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.7px);
-  -webkit-backdrop-filter: blur(5.7px);
-  border: 1px solid rgba(255, 255, 255, 0.59);
-
-  :hover {
-    cursor: pointer;
-    color: #2c3e50;
-    transition: all 0.3s ease-in-out;
-  }
-}
-
-a {
-  text-decoration: none;
-  font-size: 15px;
-  color: white;
-  padding: 20px;
-}
+@import "main.scss";
 </style>

@@ -133,12 +133,23 @@ header {
       list-style: none;
       text-decoration: none;
       margin: 0;
+      &:hover {
+        cursor: none;
+      }
     }
 
     li {
       text-transform: uppercase;
       padding: 16px;
       margin-left: 16px;
+      &:hover {
+        cursor: none;
+      }
+      a {
+        &:hover {
+          cursor: none;
+        }
+      }
     }
 
     .link {
@@ -148,6 +159,7 @@ header {
       border-bottom: 1px solid transparent;
 
       &:hover {
+        cursor: none;
         color: blue;
         border-color: lightblue;
       }
@@ -171,7 +183,10 @@ header {
       justify-content: flex-end;
 
       .link {
-        color: #fff;
+        color: #000;
+        &:hover {
+          cursor: none;
+        }
       }
     }
 
@@ -184,9 +199,11 @@ header {
       height: 100%;
 
       i {
-        cursor: pointer;
         font-size: 24px;
         transition: 0.8s ease all;
+        &:hover {
+          cursor: none;
+        }
       }
     }
 

@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap");
+
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('/src/assets/fonts/Brownsugar.otf') format('opentype'),
+       url('/src/assets/fonts/Brownsugar.otf') format('truetype');
+}
+
+body {
+  background: black;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.container {
+  font-family: 'MyFont';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: #000;
+  text-align: center;
+  background-color: #EDECED;
+    /*   background: url("https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1181&q=80");
+  */background-position: center;
+  background-size: cover;
+}
+
+.second{
+      background: url("https://images.unsplash.com/photo-1420442442888-15c96323ec3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80");
+
+}
+
+.container__headline {
+  font-size: 5vmin;
+}
+
+.hero__inner {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: #c5c5c5;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(100% / (16 / 9));
+  }
+}
+
+.hero__images {
+}
+
+.hero__content {
+  display: none;
+  position: absolute;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__headline {
+  --padding: 1.5vmin;
+  --duration: 400ms;
+  --delay: calc(var(--duration) / 2);
+  --ease: cubic-bezier(0.25, 1, 0.5, 1);
+letter-spacing: 5px;
+  position: relative;
+  display: inline-block;
+  font-size: 10vmin;
+  overflow: hidden;
+  margin-top: calc(var(--padding) * -1);
+  padding: var(--padding);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - var(--padding));
+    left: 0;
+    background-color: white;
+    width: 100%;
+    height: 1.5vmin;
+    transform: scaleX(0);
+    transition: transform var(--duration) var(--delay) var(--ease);
+  }
+
+  span {
+    display: block;
+    transform: translateY(115%);
+    transition: transform var(--duration) var(--ease);
+  }
+
+  .active & {
+    &::after {
+      transform: scaleX(1);
+      transition-delay: 0s;
+    }
+    span {
+      transform: translateY(0);
+      transition-delay: var(--delay);
+    }
+  }
+}
+
+
+* {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #EDECED;
+  overflow: hidden;
+  @media (max-width: 875px) {
+    background-color: lightblue;
+    flex-direction: column-reverse;
+  }
+}
+
+.Porfolio__ {
+  &home {
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+    @media (max-width: 875px) {
+      padding-top: 70px;
+    }
+  }
+  &flexbox {
+    border: 1px solid blue;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+
+    @media (max-width: 875px) {
+      background-color: lightblue;
+      flex-direction: column-reverse;
+      padding-top: 0px;
+    }
+
+    .Portfolio__introduction__box{
+      line-height: 1.5;
+      h1{
+        letter-spacing: 6px;
+      }
+    }
+
+  }
+  h1 {
+    font-size: 32px;
+  }
+
+  &project {
+    border: 1px solid gold;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &card {
+    width: 400px;
+    height: 330px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  &card_img {
+    width: 50%;
+  }
+  p {
+    font-weight: 700;
+  }
+}
+
+
+.Porfolio__card {
+  position: relative;
+  z-index: 1;
+  /* Add any other styles you need */
+}
+
+.fullscreen-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.fullscreen-container.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fullscreen-container .Porfolio__card {
+  max-width: 90%;
+  max-height: 90%;
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.fullscreen-container.show .Porfolio__card {
+  max-width: none;
+  max-height: none;
+  width: 1300px;
+  height: 850px;
+  margin: 0;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  .Portfolio {
+    &__border {
+      width: 500px;
+      margin: auto;
+      border: 1px solid #fff;
+      opacity: 0.4;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    &__icon {
+      i {
+        margin: 10px;
+        cursor: none;
+        &:hover {
+          transform: scale(1.2);
+          color: #fff;
+          opacity: 0.9;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+  p {
+    padding-top: 50px;
+    font-weight: 500;
+  }
+}
+.img_pea {
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  @media (max-width: 875px) {
+    width: 300px;
+  }
+}
+video{
+  border-radius: 6px;
+  height: 100%;
+}
+
+/* Button */
+
+.btn_download {
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.41);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  border: 1px solid rgba(255, 255, 255, 0.59);
+  cursor: none;
+
+  :hover {
+    cursor: none;
+    color: #2c3e50;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+a {
+  text-decoration: none;
+  font-size: 15px;
+  color: grey;
+  padding: 20px;
+  &:hover {
+    cursor: none;
+    color: #000;
+  }
+}
