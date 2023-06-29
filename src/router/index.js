@@ -3,10 +3,11 @@ import HomeView from "../views/HomeView.vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(".hero", {
+document.addEventListener("DOMContentLoaded", function () {
+
+  gsap.from(".hero", {
     scrollTrigger: {
       trigger: ".hero",
       scrub: true,
