@@ -6,7 +6,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
-
   gsap.from(".hero", {
     scrollTrigger: {
       trigger: ".hero",
