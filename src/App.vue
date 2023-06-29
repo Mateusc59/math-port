@@ -25,7 +25,7 @@
     <div class="hero__inner">
       <div class="hero__images">
         <div class="hero__content">
-          <div class="hero__headline ">
+          <div class="hero__headline">
             <span class="hero__image">Nice to meet you !</span>
           </div>
         </div>
@@ -147,8 +147,9 @@ export default {
 
   setup() {
     const onSwiper = (swiper) => {
-/*       console.log(swiper);
- */    };
+      /*       console.log(swiper);
+       */
+    };
     const onSlideChange = () => {
       /*       console.log("slide change");
        */
