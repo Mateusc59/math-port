@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     ease: "power2.out",
   });
-  ScrollTrigger.refresh()
+  ScrollTrigger.refresh();
 });
 
 const routes = [
