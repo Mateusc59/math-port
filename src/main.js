@@ -1,6 +1,4 @@
 import { createApp } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import App from "./App.vue";
 import router from "./router";
@@ -9,7 +7,7 @@ import "./web-components/custom-cursor/custom-cursor.js";
 import "./web-components/custom-cursor/custom-cursor";
 import "./swiper-fullscreen/swiper-fullscreen.js";
 
-document.addEventListener("DOMContentLoaded", function () {
+/* document.addEventListener("DOMContentLoaded", function () {
   gsap.registerPlugin(ScrollTrigger);
 
   gsap.to(".hero", {
@@ -38,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     y: "-30%",
     ease: "power2",
   });
-});
+}); */
 
 createApp(App).use(i18n).use(router).mount("#app");
 
