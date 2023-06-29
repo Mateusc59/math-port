@@ -10,8 +10,8 @@ import "./web-components/custom-cursor/custom-cursor";
 import "./swiper-fullscreen/swiper-fullscreen.js";
 
 // Import  ScrollTrigger libraries
-gsap.registerPlugin(ScrollTrigger);
 document.addEventListener("DOMContentLoaded", function () {
+  gsap.registerPlugin(ScrollTrigger);
   // GSAP animation code here
   gsap.to(".hero", {
     scrollTrigger: {
