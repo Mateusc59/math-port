@@ -11,7 +11,7 @@
   "dependencies": {
     "@studio-freight/lenis": "^1.0.16",
     "core-js": "^3.8.3",
-    "gsap": "3.11.0",
+    "gsap": "^3.12.2",
     "scrolltrigger": "^1.0.1",
     "splitting": "^1.0.6",
     "swiper": "^9.4.1",

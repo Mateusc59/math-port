@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
-  gsap.registerPlugin(ScrollTrigger);
-
   gsap.to(".hero", {
     scrollTrigger: {
       trigger: ".hero",
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       markers: true, // Optional: Add markers to visualize the trigger
       invalidateOnRefresh: true, // Optional: Invalidate the ScrollTrigger on refresh
     },
-    ease: "power2",
+    ease: "power2.out",
   });
 
   gsap.to(".hero__headline", {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       invalidateOnRefresh: true, // Optional
     },
     y: "-30%",
-    ease: "power2",
+    ease: "power2.out",
   });
 });
 
