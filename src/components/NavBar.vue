@@ -6,24 +6,36 @@
       </div>
       <ul v-show="!mobile" class="navigation">
         <li>
-          <router-link class="link" :to="{ name: 'Home' }">{{
-            $t("nav.home")
-          }}</router-link>
+          <router-link
+            class="link"
+            :to="{ name: 'Home' }"
+            @click="scrollToSection('#section')"
+            >{{ $t("nav.home") }}</router-link
+          >
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">{{
-            $t("nav.about")
-          }}</router-link>
+          <router-link
+            class="link"
+            :to="{ name: '' }"
+            @click="scrollToSection('#sectionone')"
+            >{{ $t("nav.about") }}</router-link
+          >
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">{{
-            $t("nav.portfolio")
-          }}</router-link>
+          <router-link
+            class="link"
+            :to="{ name: '' }"
+            @click="scrollToSection('#sectiontwo')"
+            >{{ $t("nav.portfolio") }}</router-link
+          >
         </li>
         <li>
-          <router-link class="link" :to="{ name: '' }">{{
-            $t("nav.contact")
-          }}</router-link>
+          <router-link
+            class="link"
+            :to="{ name: '' }"
+            @click="scrollToSection('#sectionthree')"
+            >{{ $t("nav.contact") }}</router-link
+          >
         </li>
       </ul>
       <div class="icon">
@@ -80,6 +92,19 @@ export default {
   methods: {
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
+    },
+
+    scrollToSection(sectionId) {
+      if (sectionId !== "") {
+        event.preventDefault();
+        const targetElement = document.querySelector(sectionId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop,
+            behavior: "smooth",
+          });
+        }
+      }
     },
 
     updateScroll() {

@@ -2,12 +2,23 @@
   <NavBar />
   <router-view />
   <header class="container">
-    <div class="Porfolio__home container__headline">
+    <div class="Porfolio__home container__headline" id="section">
       <div class="Porfolio__flexbox">
-        <!--         <img alt="Vue" class="img_pea" src="./assets/Math.png" />
- -->
-        <video autoplay muted>
+        <!--         <img alt="Vue" class="img_pea" src="./assets/Math.png" />   -->
+        <video
+          id="video"
+          class="video"
+          preload="metadata"
+          autoplay
+          muted
+          loop
+          playsinline
+        >
           <source class="img_pea" src="./assets/math.mp4" type="video/mp4" />
+          <source class="img_pea" src="./assets/mathi.mp4" type="video/mp4" />
+          <source class="img_pea" src="./assets/math.webm" type="video/webm" />
+          <source src="images/math.m4v" type="video/x-m4v" />
+
           Your browser does not support the video tag.
         </video>
 
@@ -31,13 +42,14 @@
         </div>
       </div>
     </div>
+    <div id="sectiontwo"></div>
   </section>
-
   <div class="Porfolio__container">
-    <div class="Porfolio__home"></div>
-    <div>
-      <h2>Projects Portfolio</h2>
-      <p>Search projects</p>
+    <div class="Porfolio__home">
+      <div>
+        <h2>Projects Portfolio</h2>
+        <p>Search projects</p>
+      </div>
     </div>
 
     <div class="Porfolio__project">
@@ -51,7 +63,13 @@
       >
         <swiper-slide>
           <div class="Porfolio__card">
-            <p>Quote Generator Api</p>
+            <h3>Quote Generator Api</h3>
+            <p>
+              Here is a small project where you can have a random quote if you
+              feel in need ...<a href="https://codepen.io/mateusc59/pen/jOpVvzN"
+                >More info</a
+              >
+            </p>
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -61,7 +79,13 @@
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <p>Multistep Form</p>
+            <h3>Multistep Form</h3>
+            <p>
+              Here is a small project where you can have a random quote if you
+              feel in need ...<a href="https://codepen.io/mateusc59/pen/LYBWdGM"
+                >More info</a
+              >
+            </p>
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -71,56 +95,68 @@
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <p>Tips Calcultator</p>
+            <h3>Tips Calcultator</h3>
+            <p>
+              Here is a small project where you can have a random quote if you
+              feel in need ...<a href="https://codepen.io/mateusc59/pen/qBKwRRV"
+                >More info</a
+              >
+            </p>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
+            <h3>Review</h3>
+            <p>
+              Here is a small project where you can submit a review ...<a
+                href="https://codepen.io/mateusc59/pen/vYrMymm"
+                >More info</a
+              >
+            </p>
             <img
               alt="Vue"
               class="Porfolio__card_img"
-              src="./assets/code1.png"
+              src="./assets/review.png"
             />
-            <p>My Name Project</p>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <img
-              alt="Vue"
-              class="Porfolio__card_img"
-              src="./assets/code1.png"
-            />
-            <p>My Name Project</p>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="Porfolio__card">
-            <img
-              alt="Vue"
-              class="Porfolio__card_img"
-              src="./assets/code1.png"
-            />
-            <p>My Name Project</p>
+            <h3>Scan me</h3>
+            <p>
+              Just in case you need more information you can scan me
+              <a href="https://codepen.io/mateusc59/pen/PoaVyRx">More info</a>
+            </p>
+            <img alt="Vue" class="Porfolio__card_img" src="./assets/scan.png" />
           </div>
         </swiper-slide>
       </swiper>
     </div>
-    <footer>
-      <div class="Portfolio__border"></div>
-      <h2>Follow me</h2>
-      <div class="Portfolio__icon">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-gitlab"></i>
-        <i class="fa-brands fa-github"></i>
-      </div>
-      <p>© 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H</p>
-    </footer>
   </div>
-  <footer class="container second">
+  <div class="container second">
     <h2 class="container__headline">That's pretty neat.</h2>
+  </div>
+  <footer>
+    <div class="Portfolio__border"></div>
+    <h2>Follow me</h2>
+    <div class="Portfolio__icon" data-cursor="hover">
+      <i class="fa-brands fa-instagram"
+        ><a href="https://www.instagram.com/hldemth/" target="_blank"></a
+      ></i>
+      <i class="fa-brands fa-github"
+        ><a href="https://github.com/Mateusc59" target="_blank"></a
+      ></i>
+      <i class="fa-brands fa-linkedin"
+        ><a
+          href="http://www.linkedin.com/in/mathieu-hollande"
+          target="_blank"
+        ></a
+      ></i>
+    </div>
+    <p id="sectionthree">
+      © 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H
+    </p>
   </footer>
 </template>
 

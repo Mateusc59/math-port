@@ -32,8 +32,7 @@ body {
 }
 
 .second{
-      background: url("https://images.unsplash.com/photo-1420442442888-15c96323ec3c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80");
-
+background-color: #c5c5c5;
 }
 
 .container__headline {
@@ -133,7 +132,7 @@ body {
   background-color: #EDECED;
   overflow: hidden;
   @media (max-width: 875px) {
-    background-color: lightblue;
+    background-color: #fff;
     flex-direction: column-reverse;
   }
 }
@@ -146,7 +145,7 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
-    padding-top: 100px;
+    padding: 10px;
     @media (max-width: 875px) {
       padding-top: 70px;
     }
@@ -160,7 +159,7 @@ body {
     align-items: center;
 
     @media (max-width: 875px) {
-      background-color: lightblue;
+      background-color: #fff;
       flex-direction: column-reverse;
       padding-top: 0px;
     }
@@ -183,15 +182,28 @@ body {
     flex-wrap: wrap;
   }
   &card {
-    width: 400px;
-    height: 330px;
+    width: 350px;
+    height: 300px;
     background-color: #fff;
     border-radius: 10px;
     margin: auto;
     margin-bottom: 20px;
+    @media (max-width:875px) {
+          width: 100%;
+          height: 100%;
+          background-color: #EDECED;
+    }
   }
   &card_img {
-    width: 50%;
+    height: 49%;
+    object-fit: cover;
+    border-radius:6px;
+    @media (max-width:875px) {
+      background: #EDECED;
+      object-fit: contain;
+      padding: 5px;    
+      width: 100%;    
+    }
   }
   p {
     font-weight: 700;
@@ -203,6 +215,17 @@ body {
   position: relative;
   z-index: 1;
   /* Add any other styles you need */
+  display: flex;
+flex-direction: column; 
+align-items: center;
+justify-content: space-evenly;
+p{
+    font-size: 20px;
+    display: none;
+  }
+  h3{
+    font-family: 'Myfont';
+  }
 }
 
 .fullscreen-container {
@@ -241,6 +264,13 @@ body {
   width: 1300px;
   height: 850px;
   margin: 0;
+  h3{
+    display: block;
+  }
+  p{
+    display: block;
+    font-size: 30px;
+  }
 }
 
 footer {
@@ -260,17 +290,25 @@ footer {
       i {
         margin: 10px;
         cursor: none;
+        position: relative;
         &:hover {
           transform: scale(1.2);
           color: #fff;
           opacity: 0.9;
           transition: 0.5s;
         }
+        a{
+          position: absolute;
+          padding: 0;
+          left: 0;
+          right: 0;
+        }
       }
     }
   }
   p {
-    padding-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
     font-weight: 500;
   }
 }
@@ -286,6 +324,7 @@ footer {
 video{
   border-radius: 6px;
   height: 100%;
+  width: 53%;
 }
 
 /* Button */
