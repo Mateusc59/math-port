@@ -4,5 +4,13 @@
       "about": "A propos",
       "portfolio": "Mon Portfolio",
       "contact": "Me joindre"
+    },
+    "main":{
+      "title": "Salut, je suis Mathieu",
+      "subtitle": "Développeur frontend & Amoureux du Css ",
+      "resume":"Curriculum Vitae",
+      "meet":"Enchanté de vous rencontrer"
+
     }
+    
 }

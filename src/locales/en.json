@@ -4,5 +4,11 @@
     "about": "About",
     "portfolio": "My Portfolio",
     "contact": "Contact"
+  },
+  "main":{
+    "title": "Hi, I'm Mathieu",
+    "subtitle": "Frontend developer & Css lover",
+    "resume":"Resume",
+    "meet":"Nice to meet you"
   }
 }

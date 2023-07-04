@@ -23,10 +23,10 @@
         </video>
 
         <div class="Portfolio__introduction__box">
-          <h1>Hi, I'm Mathieu</h1>
-          <p>Frontend developer & Css lover</p>
+          <h1>{{ $t("main.title") }}</h1>
+          <p>{{ $t("main.subtitle") }}</p>
           <button class="btn_download" data-cursor="hover">
-            <a href="/cv.pdf" download="cv">Resume ⬇ </a>
+            <a href="/cv.pdf" download="cv">{{ $t("main.resume") }}⬇ </a>
           </button>
         </div>
       </div>
@@ -37,7 +37,7 @@
       <div class="hero__images">
         <div class="hero__content">
           <div class="hero__headline">
-            <span>Nice to meet you !</span>
+            <span>{{ $t("main.meet") }}</span>
           </div>
         </div>
       </div>

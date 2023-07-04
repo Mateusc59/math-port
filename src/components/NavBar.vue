@@ -13,14 +13,14 @@
             >{{ $t("nav.home") }}</router-link
           >
         </li>
-        <li>
+        <!--  <li>
           <router-link
             class="link"
             :to="{ name: '' }"
             @click="scrollToSection('#sectionone')"
             >{{ $t("nav.about") }}</router-link
           >
-        </li>
+        </li> -->
         <li>
           <router-link
             class="link"
@@ -38,6 +38,7 @@
           >
         </li>
       </ul>
+      <LocaleSwitcher class="link" />
       <div class="icon">
         <i
           @click="toggleMobileNav"
@@ -51,9 +52,9 @@
           <li>
             <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
           </li>
-          <li>
+          <!--  <li>
             <router-link class="link" :to="{ name: '' }">About</router-link>
-          </li>
+          </li> -->
           <li>
             <router-link class="link" :to="{ name: '' }">Portfolio</router-link>
           </li>
@@ -62,7 +63,6 @@
           </li>
         </ul>
       </transition>
-      <LocaleSwitcher />
     </nav>
   </header>
 </template>
