@@ -9,8 +9,21 @@
       "title": "Salut, je suis Mathieu",
       "subtitle": "Développeur frontend & Amoureux du Css ",
       "resume":"Curriculum Vitae",
-      "meet":"Enchanté de vous rencontrer"
+      "meet":"Enchanté de vous rencontrer",
+      "projects":"MES PROJETS",
+      "quote":"Generateur de quote",
+      "quotetext":"Voici un petit projet utilisant Javascript et API où vous pourrez avoir une citation aléatoire si vous en ressentez le besoin...",
+      "multi":"Formulaire à plusieurs étapes",
+      "multitext":"Pour celui-ci, j'ai utilisé principalement Javascript et Css pour créer un formulaire à plusieurs étapes où vous pouvez ajouter votre abonnement.",
+      "tips":"    Tips Calcultator    ",
+      "tipstext":"    J'essaie toujours de trouver le juste prix à offrir à quelqu'un, alors si vous avez besoin de calculer et de partager l'addition, voici un calculateur d'astuces JS.",
+      "review":"Review",
+      "reviewtext":"Je suis toujours en train d'entraîner mes compétences en Js avec ce commentaire de soumission juste pour donner un grand cinq à quelqu'un.",
+      "scan":"Balayage",
+      "scantext":"Psst.... si vous avez besoin de plus d'informations, vous pouvez utiliser votre téléphone et scanner ici, un projet assez simple mais ne manquez pas l'occasion de vous connecter. ",
+      "more":"More to come",
+      "moretext":"J'ai travaillé sur un gros projet pendant mon séjour dans ma précédente agence, c'était génial, j'ai hâte de continuer ",
+      "moreinfo":"En savoir plus "
 
     }
-    
 }

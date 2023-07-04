@@ -22,8 +22,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
-  color: #000;
+/*   height: 100vh;
+ */  color: #000;
   text-align: center;
   background-color: #EDECED;
     /*   background: url("https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1181&q=80");
@@ -137,6 +137,49 @@ body {
     flex-direction: column-reverse;
   }
 }
+.marquee {
+  --gap: 10px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  ul{
+    margin: 0;
+    list-style: none;
+    margin-left: 0;
+    font-family: 'Myfont';
+    font-size: 45px;
+    padding: 0;
+    h2{
+      font-weight:lighter;
+      margin-left: 10px;
+    }
+  }
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.marquee--reverse .marquee__content {
+  animation-direction: reverse;
+}
 
 .Porfolio__ {
   &home {
@@ -167,6 +210,7 @@ body {
 
     .Portfolio__introduction__box{
       line-height: 1.5;
+      width: 100%;
       h1{
         letter-spacing: 6px;
       }
@@ -181,11 +225,12 @@ body {
     border: 1px solid gold;
     display: flex;
     flex-wrap: wrap;
-    height: 85vh;
+    height: 70vh;
+    align-items: center;
   }
   &card {
     width: 350px;
-    height: 300px;
+    height: 400px;
     background-color: #fff;
     border-radius: 10px;
     margin: auto;
@@ -193,11 +238,14 @@ body {
     @media (max-width:875px) {
           width: 100%;
           height: 100%;
+          min-height: 300px;
+          max-height: 300px;
+          padding: 20px;
           background-color: #EDECED;
     }
   }
   &card_img {
-    height: 49%;
+    height: 39%;
     object-fit: cover;
     border-radius:6px;
     @media (max-width:875px) {
@@ -216,17 +264,20 @@ body {
 .Porfolio__card {
   position: relative;
   z-index: 1;
-  /* Add any other styles you need */
   display: flex;
-flex-direction: column; 
-align-items: center;
-justify-content: space-evenly;
-p{
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-evenly;
+  .active{
     font-size: 20px;
+    display: none;
+  }
+  .on{
     display: none;
   }
   h3{
     font-family: 'Myfont';
+    font-size: 25px;
   }
 }
 
@@ -269,10 +320,19 @@ p{
   h3{
     display: block;
   }
-  p{
+  .active{
     display: block;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
   }
+  .on{
+    display: block;
+    padding: 10px;
+a{
+  padding: 5px;
+}  
+}
 }
 
 footer {
@@ -328,7 +388,7 @@ footer {
 video{
   border-radius: 6px;
   height: 100%;
-  width: 53%;
+  width: 100%;
 }
 
 /* Button */

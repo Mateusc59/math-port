@@ -1,7 +1,7 @@
 <template>
   <NavBar />
   <router-view />
-  <header class="container">
+  <div class="container">
     <div class="Porfolio__home container__headline" id="section">
       <div class="Porfolio__flexbox">
         <!--         <img alt="Vue" class="img_pea" src="./assets/Math.png" />   -->
@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
   <section class="hero">
     <div class="hero__inner">
       <div class="hero__images">
@@ -45,10 +45,55 @@
     <div id="sectiontwo"></div>
   </section>
   <div class="Porfolio__container">
+    <section>
+      <div class="marquee">
+        <ul class="marquee__content">
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+        </ul>
+
+        <ul aria-hidden="true" class="marquee__content">
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
     <div class="Porfolio__home">
       <div>
-        <h2>Projects Portfolio</h2>
-        <p>Search projects</p>
+        <!--         <p>Search projects</p>
+ -->
       </div>
     </div>
 
@@ -63,13 +108,13 @@
       >
         <swiper-slide>
           <div class="Porfolio__card">
-            <h3>Quote Generator Api</h3>
-            <p>
-              Here is a small project where you can have a random quote if you
-              feel in need ...<a href="https://codepen.io/mateusc59/pen/jOpVvzN"
-                >More info</a
-              >
+            <h3>{{ $t("main.quote") }}</h3>
+            <p class="active">
+              {{ $t("main.quotetext") }}
             </p>
+            <button class="btn_download on" data-cursor="hover">
+              <a href="https://codepen.io/mateusc59/pen/jOpVvzN">More info</a>
+            </button>
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -79,13 +124,15 @@
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <h3>Multistep Form</h3>
-            <p>
-              Here is a small project where you can have a random quote if you
-              feel in need ...<a href="https://codepen.io/mateusc59/pen/LYBWdGM"
-                >More info</a
-              >
+            <h3>{{ $t("main.multi") }}</h3>
+            <p class="active">
+              {{ $t("main.multitext") }}
             </p>
+            <button class="btn_download on" data-cursor="hover">
+              <a href="https://codepen.io/mateusc59/pen/LYBWdGM" target="_blank"
+                >{{ $t("main.moreinfo") }}➡️
+              </a>
+            </button>
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -95,25 +142,25 @@
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <h3>Tips Calcultator</h3>
-            <p>
-              Here is a small project where you can have a random quote if you
-              feel in need ...<a href="https://codepen.io/mateusc59/pen/qBKwRRV"
-                >More info</a
-              >
+            <h3>{{ $t("main.tips") }}</h3>
+            <p class="active">
+              {{ $t("main.tipstext") }}
             </p>
+            <button class="btn_download on" data-cursor="hover">
+              <a href="https://codepen.io/mateusc59/pen/qBKwRRV">More info</a>
+            </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <h3>Review</h3>
-            <p>
-              Here is a small project where you can submit a review ...<a
-                href="https://codepen.io/mateusc59/pen/vYrMymm"
-                >More info</a
-              >
+            <h3>{{ $t("main.review") }}</h3>
+            <p class="active">
+              {{ $t("main.reviewtext") }}
             </p>
+            <button class="btn_download on" data-cursor="hover">
+              <a href="https://codepen.io/mateusc59/pen/vYrMymm">More info</a>
+            </button>
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -123,16 +170,78 @@
         </swiper-slide>
         <swiper-slide>
           <div class="Porfolio__card">
-            <h3>Scan me</h3>
-            <p>
-              Just in case you need more information you can scan me
-              <a href="https://codepen.io/mateusc59/pen/PoaVyRx">More info</a>
+            <h3>{{ $t("main.scan") }}</h3>
+            <p class="active">
+              {{ $t("main.scantext") }}
+              <button class="btn_download on" data-cursor="hover">
+                <a href="https://codepen.io/mateusc59/pen/PoaVyRx">More info</a>
+              </button>
             </p>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/scan.png" />
           </div>
         </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.more") }}</h3>
+            <p class="active">
+              {{ $t("main.moretext") }}
+              <!--               <a href="https://codepen.io/mateusc59/pen/PoaVyRx">More info</a>
+ -->
+            </p>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/code1.png"
+            />
+          </div>
+        </swiper-slide>
       </swiper>
     </div>
+    <section>
+      <div class="marquee marquee--reverse">
+        <ul class="marquee__content">
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+        </ul>
+
+        <ul aria-hidden="true" class="marquee__content">
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+          <li>
+            <h2>{{ $t("main.projects") }}</h2>
+          </li>
+        </ul>
+      </div>
+    </section>
   </div>
   <div class="container second">
     <h2 class="container__headline">That's pretty neat.</h2>

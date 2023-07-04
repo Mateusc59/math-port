@@ -9,6 +9,20 @@
     "title": "Hi, I'm Mathieu",
     "subtitle": "Frontend developer & Css lover",
     "resume":"Resume",
-    "meet":"Nice to meet you"
+    "meet":"Nice to meet you",
+    "projects":"MY PROJECTS",
+    "quote":"Quote Generator Api",
+    "quotetext":"Here is a small project using Javascript and  API where you can have a random quote if you feel in need ...",
+    "multi":"Multistep Form",
+    "multitext":"For this one i use mainly Javascript and Css to create a multistep form where you can add your plan",
+    "tips":"    Tips Calcultator    ",
+    "tipstext":"Another one, i always try to find the just price to give to someone so in case you need to calculate and split the bill here is a great JS tips calculator",
+    "review":"Review",
+    "reviewtext":"Still training my Js skills with this submit review just to give someone a big 5 ",
+    "scan":"Scan me",
+    "scantext":"Psst....if you need more informations, you can use your phone and scan here, pretty simple project but don't miss the chance to connect ",
+    "more":"More to come",
+    "moretext":"I worked on some big project during my time at my previous agency it was great can't wait to keep going ",
+    "moreinfo":" More Info"
   }
 }
