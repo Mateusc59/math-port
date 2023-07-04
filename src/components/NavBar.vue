@@ -38,7 +38,7 @@
           >
         </li>
       </ul>
-      <LocaleSwitcher class="link" />
+      <LocaleSwitcher />
       <div class="icon">
         <i
           @click="toggleMobileNav"
@@ -186,7 +186,7 @@ header {
       &:hover {
         cursor: none;
         color: blue;
-        border-color: lightblue;
+        border-color: #2c3e50;
       }
     }
 

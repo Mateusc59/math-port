@@ -1,18 +1,20 @@
 <template>
-  <div class="locale-switcher">
+  <li class="locale-switcher">
     <select v-model="$i18n.locale">
       <option value="en">English</option>
       <option value="fr">Français</option>
     </select>
-  </div>
+  </li>
 </template>
 
 <style lang="scss">
+.locale-switcher {
+  list-style: none;
+}
 select {
   background: transparent;
   position: absolute;
   top: 30px;
-  right: -120px;
   border: none;
   color: y;
 }

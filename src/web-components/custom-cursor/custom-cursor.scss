@@ -81,7 +81,7 @@ custom-cursor {
     // (This attribute is automatically added and handled in custom-cursor.js)
     &[mousedown] {
         &::part(default) {
-            background-color: green;
+            background-color: #2c3e50;
         }
     }
 

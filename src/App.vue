@@ -141,18 +141,15 @@
     <div class="Portfolio__border"></div>
     <h2>Follow me</h2>
     <div class="Portfolio__icon" data-cursor="hover">
-      <i class="fa-brands fa-instagram"
-        ><a href="https://www.instagram.com/hldemth/" target="_blank"></a
-      ></i>
-      <i class="fa-brands fa-github"
-        ><a href="https://github.com/Mateusc59" target="_blank"></a
-      ></i>
-      <i class="fa-brands fa-linkedin"
-        ><a
-          href="http://www.linkedin.com/in/mathieu-hollande"
-          target="_blank"
-        ></a
-      ></i>
+      <a href="https://www.instagram.com/hldemth/" target="_blank">
+        <i class="fa-brands fa-instagram"></i
+      ></a>
+      <a href="https://github.com/Mateusc59" target="_blank"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a href="http://www.linkedin.com/in/mathieu-hollande" target="_blank"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
     </div>
     <p id="sectionthree">
       © 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H
