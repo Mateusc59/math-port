@@ -13,10 +13,9 @@
 }
 select {
   background: transparent;
-  position: absolute;
-  top: 30px;
   border: none;
-  color: y;
+  padding: 20px;
+  text-transform: uppercase;
 }
 .scrolled-nav select {
   color: #2c3e50 !important;

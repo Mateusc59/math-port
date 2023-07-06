@@ -17,13 +17,15 @@
       "multitext":"Pour celui-ci, j'ai utilisé principalement Javascript et Css pour créer un formulaire à plusieurs étapes où vous pouvez ajouter votre abonnement.",
       "tips":"    Tips Calcultator    ",
       "tipstext":"    J'essaie toujours de trouver le juste prix à offrir à quelqu'un, alors si vous avez besoin de calculer et de partager l'addition, voici un calculateur d'astuces JS.",
-      "review":"Review",
+      "review":"Revue",
       "reviewtext":"Je suis toujours en train d'entraîner mes compétences en Js avec ce commentaire de soumission juste pour donner un grand cinq à quelqu'un.",
       "scan":"Balayage",
       "scantext":"Psst.... si vous avez besoin de plus d'informations, vous pouvez utiliser votre téléphone et scanner ici, un projet assez simple mais ne manquez pas l'occasion de vous connecter. ",
-      "more":"More to come",
+      "more":"Plus de détails à venir",
       "moretext":"J'ai travaillé sur un gros projet pendant mon séjour dans ma précédente agence, c'était génial, j'ai hâte de continuer ",
-      "moreinfo":"En savoir plus "
-
+      "moreinfo":"En savoir plus ",
+      "neat":"Voilà",
+      "follow":"Suivez-moi",
+      "credits":"© 2022. Vue.js & CSS Portfolio. Développé par Mathieu Hollande"
     }
 }

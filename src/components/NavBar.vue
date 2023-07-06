@@ -38,7 +38,7 @@
           >
         </li>
       </ul>
-      <LocaleSwitcher />
+      <LocaleSwitcher v-if="!mobile" />
       <div class="icon">
         <i
           @click="toggleMobileNav"
@@ -50,17 +50,33 @@
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
           <li>
-            <router-link class="link" :to="{ name: 'Home' }">Home</router-link>
+            <router-link
+              class="link"
+              :to="{ name: 'Home' }"
+              @click="scrollToSection('#sectiontwo')"
+              >{{ $t("nav.home") }}</router-link
+            >
           </li>
           <!--  <li>
             <router-link class="link" :to="{ name: '' }">About</router-link>
           </li> -->
           <li>
-            <router-link class="link" :to="{ name: '' }">Portfolio</router-link>
+            <router-link
+              class="link"
+              :to="{ name: '' }"
+              @click="scrollToSection('#sectiontwo')"
+              >{{ $t("nav.portfolio") }}</router-link
+            >
           </li>
           <li>
-            <router-link class="link" :to="{ name: '' }">Contact</router-link>
+            <router-link
+              class="link"
+              :to="{ name: '' }"
+              @click="scrollToSection('#sectionthree')"
+              >{{ $t("nav.contact") }}</router-link
+            >
           </li>
+          <LocaleSwitcher />
         </ul>
       </transition>
     </nav>
@@ -103,6 +119,9 @@ export default {
             top: targetElement.offsetTop,
             behavior: "smooth",
           });
+
+          // Remove the 'active' class from the mobile navigation icon
+          this.mobileNav = false;
         }
       }
     },
@@ -140,6 +159,7 @@ header {
 
   nav {
     position: relative;
+    top: 0;
     display: flex;
     flex-direction: row;
     padding: 12px;
@@ -167,6 +187,7 @@ header {
       text-transform: uppercase;
       padding: 16px;
       margin-left: 16px;
+      text-align: left;
       &:hover {
         cursor: none;
       }
@@ -222,7 +243,7 @@ header {
       top: 0;
       right: 24px;
       height: 100%;
-
+      color: #000;
       i {
         font-size: 24px;
         transition: 0.8s ease all;

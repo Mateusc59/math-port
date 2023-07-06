@@ -23,6 +23,9 @@
     "scantext":"Psst....if you need more informations, you can use your phone and scan here, pretty simple project but don't miss the chance to connect ",
     "more":"More to come",
     "moretext":"I worked on some big project during my time at my previous agency it was great can't wait to keep going ",
-    "moreinfo":" More Info"
+    "moreinfo":" More Info",
+    "neat":"That's pretty neat",
+    "follow":"Follow me",
+    "credits":"© 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H"
   }
 }

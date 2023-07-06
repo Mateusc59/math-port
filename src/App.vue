@@ -90,12 +90,12 @@
         </ul>
       </div>
     </section>
-    <div class="Porfolio__home">
+    <!--  <div class="Porfolio__home">
       <div>
-        <!--         <p>Search projects</p>
- -->
+             <p>Search projects</p>
+ 
       </div>
-    </div>
+    </div> -->
 
     <div class="Porfolio__project">
       <swiper
@@ -112,9 +112,9 @@
             <p class="active">
               {{ $t("main.quotetext") }}
             </p>
-            <button class="btn_download on" data-cursor="hover">
+            <!-- <button class="btn_download on">
               <a href="https://codepen.io/mateusc59/pen/jOpVvzN">More info</a>
-            </button>
+            </button> -->
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -128,7 +128,7 @@
             <p class="active">
               {{ $t("main.multitext") }}
             </p>
-            <button class="btn_download on" data-cursor="hover">
+            <button class="btn_download on">
               <a href="https://codepen.io/mateusc59/pen/LYBWdGM" target="_blank"
                 >{{ $t("main.moreinfo") }}➡️
               </a>
@@ -146,7 +146,7 @@
             <p class="active">
               {{ $t("main.tipstext") }}
             </p>
-            <button class="btn_download on" data-cursor="hover">
+            <button class="btn_download on">
               <a href="https://codepen.io/mateusc59/pen/qBKwRRV">More info</a>
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
@@ -158,7 +158,7 @@
             <p class="active">
               {{ $t("main.reviewtext") }}
             </p>
-            <button class="btn_download on" data-cursor="hover">
+            <button class="btn_download on">
               <a href="https://codepen.io/mateusc59/pen/vYrMymm">More info</a>
             </button>
             <img
@@ -173,7 +173,7 @@
             <h3>{{ $t("main.scan") }}</h3>
             <p class="active">
               {{ $t("main.scantext") }}
-              <button class="btn_download on" data-cursor="hover">
+              <button class="btn_download on">
                 <a href="https://codepen.io/mateusc59/pen/PoaVyRx">More info</a>
               </button>
             </p>
@@ -244,11 +244,11 @@
     </section>
   </div>
   <div class="container second">
-    <h2 class="container__headline">That's pretty neat.</h2>
+    <h2 class="container__headline">{{ $t("main.neat") }}.</h2>
   </div>
   <footer>
     <div class="Portfolio__border"></div>
-    <h2>Follow me</h2>
+    <h2>{{ $t("main.follow") }}</h2>
     <div class="Portfolio__icon" data-cursor="hover">
       <a href="https://www.instagram.com/hldemth/" target="_blank">
         <i class="fa-brands fa-instagram"></i
@@ -261,7 +261,7 @@
       ></a>
     </div>
     <p id="sectionthree">
-      © 2022. Vue.js & CSS Portfolio. Developed by Mathieu.H
+      {{ $t("main.credits") }}
     </p>
   </footer>
 </template>
