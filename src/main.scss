@@ -217,6 +217,7 @@ top: 90px;    }
     .Portfolio__introduction__box{
       line-height: 1.5;
       width: 100%;
+      padding: 10px;
       h1{
         letter-spacing: 6px;
       }
@@ -230,11 +231,11 @@ top: 90px;    }
   &project {
     display: flex;
     flex-wrap: wrap;
-    height: 70vh;
+    height: 74vh;
     align-items: center;
     @media (max-width:375px){
-      height: 50vh;
-    }
+/*       height: 50vh;
+ */    }
   }
   &card {
     width: 350px;
@@ -286,7 +287,7 @@ top: 90px;    }
   h3{
     font-family: 'Myfont';
     font-size: 25px;
-    @media (max-width: 375px) {
+    @media (max-width: 875px) {
 font-size: 15px;    }
   }
 }
@@ -329,12 +330,20 @@ font-size: 15px;    }
   margin: 0;
   h3{
     display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 25px; 
+   
   }
   .active{
     display: block;
     font-size: 35px;
     font-family: Avenir, Helvetica, Arial, sans-serif;
     text-align: center;
+    @media (max-width:875px){
+      font-size: 15px;
+
+    }
   }
   .on{
     display: block;
@@ -400,6 +409,7 @@ video{
   height: 100%;
   width: 100%;
   overflow: auto;
+  object-fit: cover;
 }
 
 /* Button */
@@ -425,7 +435,6 @@ a {
   text-decoration: none;
   font-size: 15px;
   color: grey;
-  padding: 20px;
   &:hover {
     cursor: none;
     color: #000;

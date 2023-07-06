@@ -14,7 +14,6 @@
 select {
   background: transparent;
   border: none;
-  padding: 20px;
   text-transform: uppercase;
 }
 .scrolled-nav select {
