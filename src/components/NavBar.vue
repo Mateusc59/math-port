@@ -53,7 +53,7 @@
             <router-link
               class="link"
               :to="{ name: 'Home' }"
-              @click="scrollToSection('#sectiontwo')"
+              @click="scrollToSection('#section')"
               >{{ $t("nav.home") }}</router-link
             >
           </li>

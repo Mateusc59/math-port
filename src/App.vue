@@ -42,7 +42,6 @@
         </div>
       </div>
     </div>
-    <div id="sectiontwo"></div>
   </section>
   <div class="Porfolio__container">
     <section>
@@ -67,7 +66,6 @@
             <h2>{{ $t("main.projects") }}</h2>
           </li>
         </ul>
-
         <ul aria-hidden="true" class="marquee__content">
           <li>
             <h2>{{ $t("main.projects") }}</h2>
@@ -97,7 +95,7 @@
       </div>
     </div> -->
 
-    <div class="Porfolio__project">
+    <div class="Porfolio__project" id="sectiontwo">
       <swiper
         slides-per-view="3"
         :space-between="20"
@@ -130,7 +128,7 @@
             </p>
             <button class="btn_download on">
               <a href="https://codepen.io/mateusc59/pen/LYBWdGM" target="_blank"
-                >{{ $t("main.moreinfo") }}➡️
+                >{{ $t("main.moreinfo") }}
               </a>
             </button>
             <img
@@ -147,7 +145,7 @@
               {{ $t("main.tipstext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/qBKwRRV">More info</a>
+              <a href="https://codepen.io/mateusc59/pen/qBKwRRV" target="_blank">More info</a>
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
           </div>
@@ -159,7 +157,7 @@
               {{ $t("main.reviewtext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/vYrMymm">More info</a>
+              <a href="https://codepen.io/mateusc59/pen/vYrMymm" target="_blank">More info</a>
             </button>
             <img
               alt="Vue"
@@ -173,10 +171,10 @@
             <h3>{{ $t("main.scan") }}</h3>
             <p class="active">
               {{ $t("main.scantext") }}
-              <button class="btn_download on">
-                <a href="https://codepen.io/mateusc59/pen/PoaVyRx">More info</a>
-              </button>
             </p>
+            <button class="btn_download on">
+              <a href="https://codepen.io/mateusc59/pen/PoaVyRx" target="_blank">More info</a>
+            </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/scan.png" />
           </div>
         </swiper-slide>
