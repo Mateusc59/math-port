@@ -145,7 +145,9 @@
               {{ $t("main.tipstext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/qBKwRRV" target="_blank">More info</a>
+              <a href="https://codepen.io/mateusc59/pen/qBKwRRV" target="_blank"
+                >More info</a
+              >
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
           </div>
@@ -157,7 +159,9 @@
               {{ $t("main.reviewtext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/vYrMymm" target="_blank">More info</a>
+              <a href="https://codepen.io/mateusc59/pen/vYrMymm" target="_blank"
+                >More info</a
+              >
             </button>
             <img
               alt="Vue"
@@ -173,7 +177,9 @@
               {{ $t("main.scantext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/PoaVyRx" target="_blank">More info</a>
+              <a href="https://codepen.io/mateusc59/pen/PoaVyRx" target="_blank"
+                >More info</a
+              >
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/scan.png" />
           </div>
