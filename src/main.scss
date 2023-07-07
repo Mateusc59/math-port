@@ -407,9 +407,17 @@ footer {
 video{
   border-radius: 6px;
   height: 100%;
-  width: 100%;
+  width: 50%;
   overflow: auto;
   object-fit: cover;
+  @media (max-width: 875px) {
+    width: 75%;
+    object-fit: contain;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 /* Button */
