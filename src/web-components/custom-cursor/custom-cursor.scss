@@ -9,7 +9,6 @@ body.has-cursor {
 }
 
 .has-cursor *[data-cursor] {
-    cursor: none !important; // makes sure to disable native cursor, especially on links
 }
 
 custom-cursor {
@@ -17,7 +16,6 @@ custom-cursor {
     position: fixed;
 
     body.no-cursor & {
-        display: none;
     }
 }
 
@@ -26,7 +24,6 @@ custom-cursor {
     ----------------
 */
 body.has-cursor {
-    cursor: none;
 } // removes the default browser cursor
 
 custom-cursor {
@@ -99,11 +96,11 @@ custom-cursor {
 
         &::part(hover) {
             opacity: 1; // obviously, the hover state needs to be visible, so this overrides the previous opacity: 0 applied to all states
-            transform: translate(-50%, -50%) scale(1.5); // the hover default state has a 0.5 scale, so when it's enabled it will expand to full scale.
+            transform: translate(-50%, -50%) scale(0.5); // the hover default state has a 0.5 scale, so when it's enabled it will expand to full scale.
             background-color: transparent;
             background-size: cover;
             background-position: center center;
-            backdrop-filter: blur(1px);
+            backdrop-filter: blur(2px);
             -webkit-backdrop-filter: blur(1px);
         }
     }

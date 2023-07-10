@@ -110,9 +110,9 @@
             <p class="active">
               {{ $t("main.quotetext") }}
             </p>
-            <!-- <button class="btn_download on">
+            <button class="btn_download on">
               <a href="https://codepen.io/mateusc59/pen/jOpVvzN">More info</a>
-            </button> -->
+            </button>
             <img
               alt="Vue"
               class="Porfolio__card_img"
@@ -253,14 +253,21 @@
   <footer>
     <div class="Portfolio__border"></div>
     <h2>{{ $t("main.follow") }}</h2>
-    <div class="Portfolio__icon" data-cursor="hover">
-      <a href="https://www.instagram.com/hldemth/" target="_blank">
+    <div class="Portfolio__icon">
+      <a
+        data-cursor="hover"
+        href="https://www.instagram.com/hldemth/"
+        target="_blank"
+      >
         <i class="fa-brands fa-instagram"></i
       ></a>
-      <a href="https://github.com/Mateusc59" target="_blank"
+      <a data-cursor="hover" href="https://github.com/Mateusc59" target="_blank"
         ><i class="fa-brands fa-github"></i
       ></a>
-      <a href="http://www.linkedin.com/in/mathieu-hollande" target="_blank"
+      <a
+        data-cursor="hover"
+        href="http://www.linkedin.com/in/mathieu-hollande"
+        target="_blank"
         ><i class="fa-brands fa-linkedin"></i
       ></a>
     </div>

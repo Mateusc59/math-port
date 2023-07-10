@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
       scrub: true,
       pin: true,
       start: "center center",
-      end: "bottom -100%",
+      end: "top -100%",
       toggleClass: { targets: ".hero", className: "active" },
     },
     ease: "power2.out",

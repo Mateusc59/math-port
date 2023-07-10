@@ -179,7 +179,6 @@ header {
       text-decoration: none;
       margin: 0;
       &:hover {
-        cursor: none;
       }
     }
 
@@ -189,11 +188,9 @@ header {
       margin-left: 16px;
       text-align: left;
       &:hover {
-        cursor: none;
       }
       a {
         &:hover {
-          cursor: none;
         }
       }
     }
@@ -205,7 +202,6 @@ header {
       border-bottom: 1px solid transparent;
 
       &:hover {
-        cursor: none;
         color: blue;
         border-color: #2c3e50;
       }
@@ -231,7 +227,6 @@ header {
       .link {
         color: #000;
         &:hover {
-          cursor: none;
         }
       }
     }
@@ -248,7 +243,6 @@ header {
         font-size: 24px;
         transition: 0.8s ease all;
         &:hover {
-          cursor: none;
         }
       }
     }
