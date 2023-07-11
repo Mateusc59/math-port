@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import { gsap, ScrollTrigger } from "gsap/all";
 
-console.log(gsap.registerPlugin(ScrollTrigger));
+gsap.registerPlugin(ScrollTrigger);
 window.ScrollTrigger = ScrollTrigger;
 
 document.addEventListener("DOMContentLoaded", function () {
