@@ -2,7 +2,7 @@
   <header :class="{ 'scrolled-nav': scrollNav }">
     <nav>
       <div class="branding">
-        <img src="../assets/me.png" style="width: 50px" alt="logo" />
+        <h3>Mathieu Hollande</h3>
       </div>
       <ul v-show="!mobile" class="navigation">
         <li>
@@ -170,6 +170,9 @@ header {
     @media (min-width: 1140px) {
       max-width: 1140px;
     }
+    @media (max-width: 740px) {
+      padding: 32px;
+    }
 
     ul,
     .link {
@@ -211,10 +214,10 @@ header {
       display: flex;
       align-items: center;
 
-      img {
-        width: 50px;
-        transition: 0.5s ease all;
-        border-radius: 50%;
+      h3 {
+        font-family: "Myfont";
+        letter-spacing: 1px;
+        color: #000;
       }
     }
 

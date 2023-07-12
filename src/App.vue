@@ -66,7 +66,7 @@
             <h2>{{ $t("main.projects") }}</h2>
           </li>
         </ul>
-        <ul aria-hidden="true" class="marquee__content">
+        <ul aria-hidden="true" class="marquee__content bottom">
           <li>
             <h2>{{ $t("main.projects") }}</h2>
           </li>
@@ -150,6 +150,20 @@
               >
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.test") }}</h3>
+            <p class="active">
+              {{ $t("main.testtext") }}
+            </p>
+            <button class="btn_download on">
+              <a href="https://mytrainingwebsite.vercel.app/" target="_blank"
+                >More info</a
+              >
+            </button>
+            <img alt="Vue" class="Porfolio__card_img" src="./assets/test.png" />
           </div>
         </swiper-slide>
         <swiper-slide>
