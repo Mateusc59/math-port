@@ -26,7 +26,9 @@
           <h1>{{ $t("main.title") }}</h1>
           <p>{{ $t("main.subtitle") }}</p>
           <button class="btn_download" data-cursor="hover">
-            <a href="/cv.pdf" download="cv">{{ $t("main.resume") }}⬇ </a>
+            <a href="/mathieuhollandeCV.pdf" download="cv"
+              >{{ $t("main.resume") }}⬇
+            </a>
           </button>
         </div>
       </div>
