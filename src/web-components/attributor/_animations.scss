@@ -1,0 +1,58 @@
+// Easings
+$ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1); // https://cubic-bezier.com/#.65,0,.35,1
+$ease-in-out-airbag: cubic-bezier(0.3, 0, 0, 1); // https://cubic-bezier.com/#.3,0,0,1
+
+
+// Text appearing //
+*[data-add-class="translate-in"] {
+    opacity: 0;
+    transform: translateY(50px);
+
+    &.translate-in {
+        transition: 1s opacity linear, 1s transform $ease-in-out-airbag;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Text appearing max //
+*[data-add-class="translate-in--max"] {
+    opacity: 0;
+    transform: translateY(150px);
+
+    &.translate-in--max {
+        transition: 0.5s opacity linear, 1s transform $ease-in-out-airbag;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Slide from left to right //
+*[data-add-class="translate-lateral--right"] {
+    transform: translateX(-100vw);
+
+    &.translate-lateral--right {
+        transition: 0.6s transform $ease-in-out-airbag;
+        transform: translateX(0);
+    }
+}
+
+// Mask revealing from top to bottom //
+*[data-add-class="translate-mask--bottom"] {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    &.translate-mask--bottom {
+        transition: 0.6s clip-path $ease-in-out-airbag;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+// Mask revealing from bottom to top //
+*[data-add-class="translate-mask--top"] {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+
+    &.translate-mask--top {
+        transition: 0.6s clip-path $ease-in-out-airbag;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+}

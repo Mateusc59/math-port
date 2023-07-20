@@ -23,8 +23,12 @@
         </video>
 
         <div class="Portfolio__introduction__box">
-          <h1>{{ $t("main.title") }}</h1>
-          <p>{{ $t("main.subtitle") }}</p>
+          <h1 data-anim data-add-class="translate-in" data-delay="0.45">
+            {{ $t("main.title") }}
+          </h1>
+          <p data-anim data-add-class="translate-in--max" data-delay="0.45">
+            {{ $t("main.subtitle") }}
+          </p>
           <button class="btn_download" data-cursor="hover">
             <a href="/mathieuhollandeCV.pdf" download="cv"
               >{{ $t("main.resume") }}⬇
@@ -264,7 +268,14 @@
     </section>
   </div>
   <div class="container second">
-    <h2 class="container__headline">{{ $t("main.neat") }}.</h2>
+    <h2
+      class="container__headline"
+      data-anim
+      data-add-class="translate-in"
+      data-delay="1.45"
+    >
+      {{ $t("main.neat") }}.
+    </h2>
   </div>
   <footer>
     <div class="Portfolio__border"></div>

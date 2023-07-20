@@ -6,6 +6,11 @@ import i18n from "./i18n";
 import "./web-components/custom-cursor/custom-cursor.js";
 import "./web-components/custom-cursor/custom-cursor";
 import "./swiper-fullscreen/swiper-fullscreen.js";
+import Attributor from "./web-components/attributor/Attributor.js";
+
+Attributor.init({
+  mutationObserver: true,
+});
 
 createApp(App).use(i18n).use(router).mount("#app");
 
