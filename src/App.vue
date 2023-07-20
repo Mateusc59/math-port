@@ -272,7 +272,7 @@
       class="container__headline"
       data-anim
       data-add-class="translate-in"
-      data-delay="1.45"
+      data-delay="0.75"
     >
       {{ $t("main.neat") }}.
     </h2>
