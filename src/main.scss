@@ -28,9 +28,7 @@ body {
    color: #000;
   text-align: center;
   background-color: #EDECED;
-    /*   background: url("https://images.unsplash.com/photo-1558865869-c93f6f8482af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1181&q=80");
-  */background-position: center;
-  background-size: cover;
+ 
   @media (max-width: 875px) {
    /*  height: 100%;  */   }
       
@@ -220,20 +218,37 @@ top: 90px;    }
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+    background: url("./assets/blob.svg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 700px;
 
     @media (max-width: 875px) {
       background-color: #fff;
       flex-direction: column-reverse;
-      justify-content: flex-end;
+      justify-content:space-around;
       padding-top: 0px;
     }
 
     .Portfolio__introduction__box{
       line-height: 1.5;
       width: 100%;
-      padding: 10px;
+      padding: 70px;
       h1{
         letter-spacing: 6px;
+        text-align: left;
+      }
+      p{    text-align: left;
+        letter-spacing: 0px;
+      }
+      .text{
+        text-transform: uppercase;
+        font-size: 0.75rem;
+        margin: 0;
+        font-family: arial;
+        text-align: left;
+        margin:10px auto 10px auto;
       }
     }
 
@@ -425,14 +440,24 @@ footer {
     font-weight: 500;
   }
 }
+.img__peacontainer {
+  width: 65%;
+  @media (max-width: 875px) {
+    width: 100%;
+  }
+}
 .img_pea {
-  width: 400px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 50%; /* Makes the image round */
+  object-position: -35px;
+
   @media (max-width: 875px) {
-    width: 300px;
-  }
+    width: 400px;
+    height: 400px;
+    object-position: -188px;
+}
 }
 video{
   border-radius: 6px;
@@ -478,3 +503,4 @@ a {
     color: #000;
   }
 }
+

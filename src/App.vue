@@ -4,8 +4,11 @@
   <div class="container">
     <div class="Porfolio__home container__headline" id="section">
       <div class="Porfolio__flexbox">
-        <!--         <img alt="Vue" class="img_pea" src="./assets/Math.png" />   -->
-        <video
+        <div class="img__peacontainer">
+          <img alt="Vue" class="img_pea" src="./assets/mh.webp" />
+        </div>
+
+        <!-- <video
           id="video"
           class="video"
           preload="metadata"
@@ -20,7 +23,7 @@
           <source src="images/math.m4v" type="video/x-m4v" />
 
           Your browser does not support the video tag.
-        </video>
+        </video> -->
 
         <div class="Portfolio__introduction__box">
           <h1 data-anim data-add-class="translate-in" data-delay="0.45">
@@ -29,9 +32,17 @@
           <p data-anim data-add-class="translate-in--max" data-delay="0.45">
             {{ $t("main.subtitle") }}
           </p>
+          <p
+            data-anim
+            data-add-class="translate-in--max"
+            class="text"
+            data-delay="0.75"
+          >
+            {{ $t("main.text") }}
+          </p>
           <button class="btn_download" data-cursor="hover">
-            <a href="/mathieuhollandeCV.pdf" download="cv"
-              >{{ $t("main.resume") }}⬇
+            <a href="/mathieuhollandeCV2025.pdf" download="cv"
+              >{{ $t("main.resume") }} ⬇
             </a>
           </button>
         </div>
@@ -117,12 +128,104 @@
               {{ $t("main.quotetext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/jOpVvzN">More info</a>
+              <a href="https://codepen.io/mateusc59/pen/jOpVvzN">
+                {{ $t("main.moreinfo") }}
+              </a>
             </button>
             <img
               alt="Vue"
               class="Porfolio__card_img"
               src="./assets/quote.png"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.client1") }}</h3>
+            <p class="active">
+              {{ $t("main.client1text") }}
+            </p>
+            <button class="btn_download on">
+              <a href="https://passelinhypotheque.com/" target="_blank">
+                {{ $t("main.moreinfo") }}
+              </a>
+            </button>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/client1.webp"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.client2") }}</h3>
+            <p class="active">
+              {{ $t("main.client2text") }}
+            </p>
+            <button class="btn_download on">
+              <a href="https://acamas.ca/equipe/" target="_blank">
+                {{ $t("main.moreinfo") }}
+              </a>
+            </button>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/client2.webp"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.client3") }}</h3>
+            <p class="active">
+              {{ $t("main.client3text") }}
+            </p>
+            <button class="btn_download on">
+              <a href="https://gravelgp.com/" target="_blank">
+                {{ $t("main.moreinfo") }}
+              </a>
+            </button>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/client3.webp"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.client4") }}</h3>
+            <p class="active">
+              {{ $t("main.client4text") }}
+            </p>
+            <button class="btn_download on">
+              <a href="https://ateliergauthier.ca/" target="_blank">
+                {{ $t("main.moreinfo") }}
+              </a>
+            </button>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/client4.webp"
+            />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="Porfolio__card">
+            <h3>{{ $t("main.client5") }}</h3>
+            <p class="active">
+              {{ $t("main.client5text") }}
+            </p>
+            <button class="btn_download on">
+              <a href="https://iaqcrivesud.ca/" target="_blank">
+                {{ $t("main.moreinfo") }}
+              </a>
+            </button>
+            <img
+              alt="Vue"
+              class="Porfolio__card_img"
+              src="./assets/client5.webp"
             />
           </div>
         </swiper-slide>
@@ -151,9 +254,9 @@
               {{ $t("main.tipstext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/qBKwRRV" target="_blank"
-                >More info</a
-              >
+              <a href="https://codepen.io/mateusc59/pen/qBKwRRV">
+                {{ $t("main.moreinfo") }}
+              </a>
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/tips.png" />
           </div>
@@ -165,9 +268,9 @@
               {{ $t("main.testtext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://mytrainingwebsite.vercel.app/" target="_blank"
-                >More info</a
-              >
+              <a href="https://mytrainingwebsite.vercel.app/" target="_blank">
+                {{ $t("main.moreinfo") }}
+              </a>
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/test.png" />
           </div>
@@ -179,9 +282,9 @@
               {{ $t("main.reviewtext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/vYrMymm" target="_blank"
-                >More info</a
-              >
+              <a href="https://codepen.io/mateusc59/pen/vYrMymm">
+                {{ $t("main.moreinfo") }}
+              </a>
             </button>
             <img
               alt="Vue"
@@ -197,9 +300,9 @@
               {{ $t("main.scantext") }}
             </p>
             <button class="btn_download on">
-              <a href="https://codepen.io/mateusc59/pen/PoaVyRx" target="_blank"
-                >More info</a
-              >
+              <a href="https://codepen.io/mateusc59/pen/PoaVyRx">
+                {{ $t("main.moreinfo") }}
+              </a>
             </button>
             <img alt="Vue" class="Porfolio__card_img" src="./assets/scan.png" />
           </div>
