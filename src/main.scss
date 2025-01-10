@@ -224,7 +224,7 @@ top: 90px;    }
     @media (max-width: 875px) {
       background-color: #fff;
       flex-direction: column-reverse;
-      justify-content: flex-end;
+      justify-content:space-around;
       padding-top: 0px;
     }
 
@@ -425,14 +425,24 @@ footer {
     font-weight: 500;
   }
 }
+.img__peacontainer {
+  width: 65%;
+  @media (max-width: 875px) {
+    width: 100%;
+  }
+}
 .img_pea {
-  width: 400px;
+  width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 50%; /* Makes the image round */
+  object-position: -35px;
+
   @media (max-width: 875px) {
-    width: 300px;
-  }
+    width: 400px;
+    height: 400px;
+    object-position: -188px;
+}
 }
 video{
   border-radius: 6px;

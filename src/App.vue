@@ -4,8 +4,11 @@
   <div class="container">
     <div class="Porfolio__home container__headline" id="section">
       <div class="Porfolio__flexbox">
-        <!--         <img alt="Vue" class="img_pea" src="./assets/Math.png" />   -->
-        <video
+        <div class="img__peacontainer">
+          <img alt="Vue" class="img_pea" src="./assets/mh.webp" />
+        </div>
+
+        <!-- <video
           id="video"
           class="video"
           preload="metadata"
@@ -20,7 +23,7 @@
           <source src="images/math.m4v" type="video/x-m4v" />
 
           Your browser does not support the video tag.
-        </video>
+        </video> -->
 
         <div class="Portfolio__introduction__box">
           <h1 data-anim data-add-class="translate-in" data-delay="0.45">
@@ -30,7 +33,7 @@
             {{ $t("main.subtitle") }}
           </p>
           <button class="btn_download" data-cursor="hover">
-            <a href="/mathieuhollandeCV.pdf" download="cv"
+            <a href="/mathieuhollandeCV2025.pdf" download="cv"
               >{{ $t("main.resume") }}⬇
             </a>
           </button>
