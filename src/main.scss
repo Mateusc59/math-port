@@ -233,7 +233,7 @@ top: 90px;    }
     @media (max-width: 500px) {
       background-color: #fff;
       flex-direction: column;
-      justify-content:space-around;
+      justify-content:space-evenly;
       padding-top: 0px;
       background-position: bottom;
     }
@@ -242,6 +242,9 @@ top: 90px;    }
       line-height: 1.5;
       width: 100%;
       padding: 70px;
+      @media (max-width: 500px) {
+        padding: 10px 30px 70px 30px;        ;
+      }
       h1{
         letter-spacing: 6px;
         text-align: left;
