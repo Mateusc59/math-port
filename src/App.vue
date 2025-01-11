@@ -120,6 +120,14 @@
         @slideChange="onSlideChange"
         :loop="true"
         :autoplay="{ delay: 2500 }"
+        :breakpoints="{
+          0: {
+            slidesPerView: 1, // 1 slide for screens 0px and above
+          },
+          501: {
+            slidesPerView: 3, // 3 slides for screens wider than 500px
+          },
+        }"
       >
         <swiper-slide>
           <div class="Porfolio__card">
