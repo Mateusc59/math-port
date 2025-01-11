@@ -230,6 +230,12 @@ top: 90px;    }
       justify-content:space-around;
       padding-top: 0px;
     }
+    @media (max-width: 400px) {
+      background-color: #fff;
+      flex-direction: column;
+      justify-content:space-around;
+      padding-top: 0px;
+    }
 
     .Portfolio__introduction__box{
       line-height: 1.5;
@@ -457,6 +463,11 @@ footer {
     width: 400px;
     height: 400px;
     object-position: -188px;
+}
+@media (max-width: 400px) {
+  width: 200px;
+  height: 200px;
+  object-position: -100px;
 }
 }
 video{
