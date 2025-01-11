@@ -33,6 +33,15 @@ custom-cursor {
     transform: translate(-100px, -100px); // prevents cursor from being visible on first load
 }
 
+@media (max-width: 768px) {
+    body.has-cursor {
+        cursor: auto !important; /* Restaure le curseur par défaut */
+    }
+
+    custom-cursor {
+        display: none !important; /* Cache le custom cursor */
+    }
+}
 /* 
     Custom styles 
     ----------------
