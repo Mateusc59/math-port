@@ -5,7 +5,7 @@
     <div class="Porfolio__home container__headline" id="section">
       <div class="Porfolio__flexbox">
         <div class="img__peacontainer">
-          <img alt="Vue" class="img_pea" src="./assets/mh.webp" />
+          <img alt="Vue" class="img_pea" src="./assets/math.webp" />
         </div>
 
         <!-- <video
